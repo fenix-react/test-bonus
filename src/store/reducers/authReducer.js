@@ -30,8 +30,8 @@ const authReducer = (state = initialState, action) => {
         case actionTypes.LOGOUT:
             return {
                 ...state,
-                phoneNumber: '',
-                firstName: ''
+                phoneNumber: null,
+                firstName: null
             }
         case actionTypes.LOGIN_SUCCESS: {
             return {

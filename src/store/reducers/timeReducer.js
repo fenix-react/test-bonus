@@ -1,7 +1,5 @@
 import * as actionTypes from '../actionTypes'
 
-
-
 const initialState = {
     EnterCount: 0,
     ExitCount: 0,
@@ -10,17 +8,17 @@ const initialState = {
     enterDate: null
 }
 
-const timeReducer = (state = initialState, action) => { 
+const timeReducer = (state = initialState, action) => {
     switch (action.type) {
         case actionTypes.ENTER_COUNT:
             return {
                 ...state,
-                EnterCount: state.EnterCount+1
+                EnterCount: state.EnterCount + 1
             }
         case actionTypes.EXIT_COUNT:
             return {
                 ...state,
-                ExitCount: state.ExitCount+1
+                ExitCount: state.ExitCount + 1
             }
         case actionTypes.FILL_COUNTS:
             return {
@@ -33,8 +31,16 @@ const timeReducer = (state = initialState, action) => {
                 ...state,
                 enterDate: new Date(action.enterDate)
             }
-            
-    
+        case actionTypes.CLEAN_UP:
+            return {
+                ...state,
+                EnterCount: 0,
+                ExitCount: 0,
+                EnterTime: null,
+                ExitTime: null,
+                enterDate: null
+            }
+
         default:
             return state;
     }

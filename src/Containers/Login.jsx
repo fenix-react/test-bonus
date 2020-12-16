@@ -7,7 +7,7 @@ import {Redirect} from 'react-router-dom'
 
 const Login = (props) => {
 
-    const {phoneNumber, firstName, register} = props
+    const {phoneNumber, firstName} = props
 
     const [form,
         setForm] = useState({firstName: '', phoneNumber: ''})
@@ -21,7 +21,7 @@ const Login = (props) => {
     const localPhoneNumber = localStorage.getItem('phoneNumber')
 
     let redirect = null
-    if ((phoneNumber && firstName) && (localFirstName && localPhoneNumber)) {
+    if ((phoneNumber && firstName) ) {
         redirect = <Redirect to='/dashboard'></Redirect>
     }
     useEffect(() => {

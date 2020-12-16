@@ -39,3 +39,9 @@ export const FillCounts = (enter, exit) => {
 export const FillDates = (enter) => {
     return {type: actionTypes.FILL_DATES, enterDate: enter}
 }
+
+export const cleanUp = () => {
+    return {
+        type: actionTypes.CLEAN_UP
+    }
+}

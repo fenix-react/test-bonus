@@ -1,0 +1,41 @@
+.backDrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.616);
+    z-index: 5;
+    .modalCont {
+        width: 100%;
+        margin: auto;
+        height: 80%;
+        margin-top: 5%;
+        
+        .modal {
+            position: relative;
+            height: auto;
+            background-color: #E8E8E8;
+            border-radius: 15px;
+            overflow: scroll;
+            
+            .header {
+                border: 1px solid #30475e;
+                height: 10%;
+                border-top: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #f05454;
+                margin-bottom: 0;
+            }
+            .firstRow {
+                border-left: 1px solid #30475e;
+                height: auto;
+                text-align: center;
+                color: #222831;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

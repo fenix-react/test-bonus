@@ -11,3 +11,5 @@ export const ENTER_COUNT='ENTER_COUNT'
 export const EXIT_COUNT='EXIT_COUNT'
 export const FILL_COUNTS="FILL_COUNTS"
 export const FILL_DATES='FILL_DATES'
+
+export const CLEAN_UP='CLEAN_UP'

@@ -8,6 +8,16 @@
     background-color: #e8e8e8;
     border-radius: 10px;
     text-align: center;
+    overflow: auto;
+    .exitBtn {
+        background-color: #eb4545;
+        margin-top: 2.5%;
+    }
+    .historyBtn {
+        background-color: #30475e;
+        color: #e8e8e8;
+        padding: 1%;
+    }
     .name {
         margin: auto;
         font-size: 1.2rem;

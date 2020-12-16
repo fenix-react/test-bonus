@@ -1,4 +1,5 @@
 import * as actionTypes from '../actionTypes'
+import * as actions from './index'
 
 const registerStart = () => {
     return {type: actionTypes.REGISTER_START}
@@ -28,8 +29,8 @@ const logoutAction = () => {
 
 export const logout = () => {
     return dispatch => {
-        localStorage.removeItem('phoneNumber')
-        localStorage.removeItem('firstName')
+        localStorage.clear()
+        dispatch(actions.cleanUp())
         dispatch(logoutAction())
     }
 }

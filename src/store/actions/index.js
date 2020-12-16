@@ -1,2 +1,2 @@
 export {register,logout,Login} from './authActions'
-export {EnterCount,ExitCount,FillCounts,FillDates} from './timeActions'
+export {EnterCount,ExitCount,FillCounts,FillDates,cleanUp} from './timeActions'
