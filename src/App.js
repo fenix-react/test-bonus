@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {CssBaseline,ThemeProvider} from '@material-ui/core'
+import Login from './Containers/Login'
+import theme from './Material/Theme'
+import RTL from './Material/jss-instance'
+import Navbar from './Components/Navbar/index';
+import Dashboard from './Containers/Dashboard/index'
+import { Route, Switch } from 'react-router';
 
 function App() {
   return (
+    <RTL>
+    <ThemeProvider theme={theme}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CssBaseline />
+      <Navbar></Navbar>
+      <Switch>
+      <Route exact path='/' component={Login}></Route>
+      <Route path='/dashboard' component={Dashboard}></Route>
+      </Switch>
     </div>
+    </ThemeProvider>
+    </RTL>
   );
 }
 
